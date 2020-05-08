@@ -25,7 +25,7 @@ const app = express()
 app.use('/', express.static('frontend'))
 
 app.get('/hello',(request,response)=>{
-    response.status(200).json({hello:"word"})
+    response.status(200).json({hello:"process.env"})
 })
 
 app.get('/createdb', (request, response) => {
@@ -102,4 +102,4 @@ app.delete('/messages/:id', (request, response) => {
         response.status(500).send('database error')
     })
 })
-app.listen(8080)
+app.listen(process.env.PORT||8080)
