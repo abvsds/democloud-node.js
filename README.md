@@ -14,3 +14,6 @@
      "exemplu":"json"
  }
  ```
+ 
+ 
+![](example1.png)
